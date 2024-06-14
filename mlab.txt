@@ -1,0 +1,11 @@
+project/
+  |- src/
+  |   |- routes/
+  |   |   |- signin.js
+  |   |   |- signup.js
+  |   |   |- signout.js
+  |   |- middleware/
+  |   |   |- verifyToken.js
+  |   |- app.js
+  |- .env
+  |- package.json

@@ -1,0 +1,148 @@
+# Register a new user
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "email": "admin@de.com",
+  "username": "admin",
+  "phone": "843121123",
+  "password": "admin123",
+  "userType": "employer"
+}
+###
+# Register a new user
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "identifier": "82344333",
+  "password": "admin123",
+  "confirmPassword": "admin123",
+  "userType": "employer"
+}
+
+###
+# Login with the registered user
+
+POST http://localhost:8080/signin
+Content-Type: application/json
+
+{
+  "identifier": "mlab_52a11757",
+  "password": "admin123"
+}
+
+###
+DELETE  http://localhost:8080/user/7
+
+###
+GET http://localhost:8080/post/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlclR5cGUiOiJlbXBsb3llciIsImlhdCI6MTcxNzkzOTM5NSwiZXhwIjoxNzE3OTQyOTk1fQ.KzhNOJU0NsZhJpTTlxMoQOy1pWra-RBXNkfk9NvWzQI
+
+
+
+###
+
+# Create a new job listing
+POST http://localhost:8080/create-posting
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlclR5cGUiOiJlbXBsb3llciIsImlhdCI6MTcxODM1NjkwNywiZXhwIjoxNzE4MzYwNTA3fQ.5cDaRURS-2DyC4Rg9Bs2U_Tgf22fSYwudXalDcIq5ig
+
+
+{
+  "title": "Graphic Designer",
+  "description": "Join our team as a Graphic Team",
+  "requirements": "Bachelor's degree, 3+ years of experience in maintenance",
+  "additionalRequirements": [
+    "Experience with JavaScript frameworks (e.g., React, Angular)",
+    "Strong problem-solving skills"
+  ],
+  "salary": "400k MMK per month",
+  "location": "Mawlamyine"
+}
+
+
+###
+GET http://localhost:8080/post/3
+# update user with id
+###
+PUT http://localhost:8080/2
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123",
+  "userType": "employer"
+}
+
+# ###
+# GET http://localhost:5000/api/protected
+
+# ###
+# POST http://localhost:5000/api/login
+# Content-Type: application/json
+
+# {
+#     "username": "user1",
+#     "password": "password1"
+# }
+
+# ###
+# GET http://localhost:5000/api/protected
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMjg0NDgwMywiZXhwIjoxNzEyODQ4NDAzfQ.YZfBq7V3c_jmPL3Snot5oVUAtnLs-FlN2wOl54J60k4
+# ###
+
+# POST http://localhost:4000/mlab/signin
+# Content-Type: application/json
+
+# {
+#     "email": "mlab@mlab.com",
+#     "password": "mlabmlab"
+# }
+
+# ###
+# GET http://localhost:5000/api/protected
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMjg0NDgwMywiZXhwIjoxNzEyODQ4NDAzfQ.YZfBq7V3c_jmPL3Snot5oVUAtnLs-FlN2wOl54J60k4
+# ###
+
+# POST http://localhost:4000/mlab/signin
+# Content-Type: application/json
+
+# {
+#     "email": "xaxayoy623@gmail.com",
+#     "password": "test1234"
+# }
+
+# ###
+# POST http://localhost:4000/mlab/signout
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhheGF5b3k2MjNAZ21haWwuY29tIiwiaWF0IjoxNzEyOTA5MTU4LCJleHAiOjE3MTI5MTI3NTh9.lX5j3zaZW37bfS2vToIFFyL9JvC5ZBP8_ePso3p754E
+
+# ###
+
+# GET http://localhost:8080/mlab/post
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksImVtYWlsIjoidGVzdEBtbGFiLmNvbSIsImlhdCI6MTcxNjY0NDQ5OCwiZXhwIjoxNzE2NjQ4MDk4fQ.rLlXi5lwgkF_YUSnNU_2Wd-VOcNn-6L5REgSpcrOvs8
+# # Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhheGF5b3k2MjNAZ21haWwuY29tIiwiaWF0IjoxNzEyOTA5MTU4LCJleHAiOjE3MTI5MTI3NTh9.lX5j3zaZW37bfS2vToIFFyL9JvC5ZBP8_ePso3p754E
+# ###
+
+# DELETE  http://localhost:4000/mlab/delete-user
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InhheGF5b3k2MjNAZ21haWwuY29tIiwiaWF0IjoxNzEyOTA5MTU4LCJleHAiOjE3MTI5MTI3NTh9.lX5j3zaZW37bfS2vToIFFyL9JvC5ZBP8_ePso3p754E
+# ###
+
+# POST http://localhost:8080/mlab/signup
+# Content-Type: application/json
+
+# {
+#     "username": "test",
+#     "email": "test@mlab.com",
+#     "password": "test1234"
+# }
+
+# ###
+# {
+#     "username": "mlab",
+#     "email": "mlab@gmail.com",
+#     "password": "mlab....",
+#     "password": "mlabmlab"
+# }
+# ###
+# GET http://localhost:3003/user
